@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
+        with:
+          ref: gh-pages
 
       - name: setup node/pnpm and install dependencies
         uses: ./.github/workflows/setup-node-pnpm
