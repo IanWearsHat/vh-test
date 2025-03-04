@@ -1,0 +1,50 @@
+@import "src/globals/vh-styles.scss";
+
+#faq-accordion-wrapper {
+	width: 80vw;
+	text-align: left;
+
+	#faq-accordion-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 20px;
+
+		@media screen and (max-width: 830px) {
+			display: none;
+		}
+	}
+
+	#faq-accordion-mobile {
+		display: none;
+
+		@media screen and (max-width: 830px) {
+			display: block;
+		}
+	}
+}
+
+// BOOTSTRAP ACCORDION STYLING
+
+.accordion {
+	text-align: left;
+	--bs-accordion-color: $darkPurple;
+	--bs-accordion-active-color: $darkPurple;
+	--bs-accordion-btn-color: $darkPurple;
+	--bs-accordion-bg: none;
+	--bs-accordion-border-color: none;
+	--bs-accordion-border-radius: none;
+	--bs-accordion-active-bg: none;
+	--bs-accordion-btn-focus-box-shadow: none;
+}
+
+.accordion-body {
+	padding-top: 0px;
+}
+
+.accordion-item {
+	border-bottom: $darkPurple 1px solid;
+}
+
+.accordion .accordion-button {
+	box-shadow: none;
+}
