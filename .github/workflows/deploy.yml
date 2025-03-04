@@ -22,6 +22,11 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: gh-pages
+      
+      - name: List files and directories
+        run: |
+          echo "Listing files and directories in the repository:"
+          ls -alh
 
       - name: setup node/pnpm and install dependencies
         uses: ./.github/actions/setup-node-pnpm
