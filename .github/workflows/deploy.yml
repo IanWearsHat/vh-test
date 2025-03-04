@@ -24,7 +24,7 @@ jobs:
           ref: gh-pages
 
       - name: setup node/pnpm and install dependencies
-        uses: ./.github/workflows/setup-node-pnpm
+        uses: ./.github/actions/setup-node-pnpm
 
       - name: setup pages
         uses: actions/configure-pages@v4
