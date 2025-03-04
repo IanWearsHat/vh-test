@@ -7,6 +7,7 @@ const App = () => (
 	<div className="App">
 		<BrowserRouter>
 			<Nav />
+			
 			<Routes>
 				<Route path="/" element={<ComingSoon />} />
 				{/* <Route path="/schedule" element={<Schedule />} />
