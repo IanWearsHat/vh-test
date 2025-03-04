@@ -26,7 +26,7 @@ jobs:
       - name: List files and directories
         run: |
           echo "Listing files and directories in the repository:"
-          ls -alh
+          ls -alhR .github
 
       - name: setup node/pnpm and install dependencies
         uses: ./.github/actions/setup-node-pnpm
