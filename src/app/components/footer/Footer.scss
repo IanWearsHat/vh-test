@@ -1,0 +1,20 @@
+@import "src/globals/vh-styles.scss";
+
+#footer {
+	width: 100vw;
+	height: 125px;
+	background-color: $darkPurple;
+	font-size: 35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	a {
+		color: $fontColor;
+		margin: 0 15px;
+	}
+
+	a:hover {
+		color: $pink;
+	}
+}
