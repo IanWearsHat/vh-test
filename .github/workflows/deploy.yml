@@ -41,7 +41,6 @@ jobs:
           echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
       - name: cache dependencies in pnpm
-        working-directory: ./site
         uses: actions/cache@v4
         with:
           path: ${{ env.STORE_PATH }}
@@ -54,12 +53,8 @@ jobs:
         shell: bash
         run: pnpm install
 
-      - name: setup pages
-        uses: actions/configure-pages@v4
-        with:
-          static_site_generator: next
-
       - name: build vite
+        working-directory: ./site
         run: npx vite build
 
       - name: upload
