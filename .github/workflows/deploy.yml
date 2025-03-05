@@ -75,6 +75,5 @@ jobs:
 
     steps:
       - name: publish to github pages
-        working-directory: ./site
         id: deployment
         uses: actions/deploy-pages@v4
