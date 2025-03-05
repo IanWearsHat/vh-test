@@ -16,12 +16,14 @@ runs:
         run_install: false
 
     - name: get pnpm store dir
+      working-directory: ./site
       shell: bash
       run: |
         echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
     - name: cache dependencies in pnpm
       uses: actions/cache@v4
+      working-directory: ./site
       with:
         path: ${{ env.STORE_PATH }}
         key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -29,5 +31,6 @@ runs:
           ${{ runner.os }}-pnpm-store-
 
     - name: install dependencies in pnpm
+      working-directory: ./site
       shell: bash
       run: pnpm install
