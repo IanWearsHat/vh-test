@@ -20,8 +20,6 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
-        with:
-          ref: gh-pages
 
       - name: Debug directory structure
         run: |
@@ -53,12 +51,12 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: install dependencies in pnpm
-        working-directory: /site
+        working-directory: ./site
         shell: bash
         run: pnpm install
 
       - name: build vite
-        working-directory: /site
+        working-directory: ./site
         run: npx vite build
 
       - name: upload
