@@ -60,8 +60,8 @@ jobs:
         run: npx vite build
 
       - name: upload
-        uses: actions/upload-pages-artifact@v3
         working-directory: ./site
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
