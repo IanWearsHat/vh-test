@@ -5,7 +5,7 @@ import { Nav, Redirect } from "src/app/components";
 
 const App = () => (
 	<div className="App">
-		<BrowserRouter>
+		<BrowserRouter basename="/vh-test">
 			<Nav />
 			
 			<Routes>
